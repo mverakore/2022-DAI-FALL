@@ -1,15 +1,14 @@
-import Main from './screens/main';
-import { Provider as PaperProvider } from 'react-native-paper';
-
+// import '../styles/globals.css'
 import * as eva from '@eva-design/eva';
+import Main from '../screens/main';
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 
-export default function App() {
+function MyApp({ Component, pageProps }) {
   return (
     <ApplicationProvider {...eva} theme={eva.light}>
-    <PaperProvider>
-      <Main />
-    </PaperProvider>
+      <Main></Main>
     </ApplicationProvider>
-  );
+  )
 }
+
+export default MyApp
